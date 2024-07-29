@@ -1,11 +1,28 @@
 a {
     color: #8cd2d5;
+    position: relative;
     text-decoration: none;
+    display: inline-block;
 }
 
 a:hover {
     color: #a9dde0;
     outline: 0;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #a9dde0;
+    transition: width 0.2s ease-in-out;
+}
+
+a:hover::after {
+    width: 100%;
 }
 
 body {
