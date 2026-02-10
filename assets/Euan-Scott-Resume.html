@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="YAMLResume (https://yamlresume.dev)">
+
+
+  <title>Euan Scott Resume</title>
+  <style>
+    :root {
+      --text-font-size: 16px;
+    }
+
+    /* Modified from: https://www.joshwcomeau.com/css/custom-css-reset/ */
+
+    /* 1. Use a more-intuitive box-sizing model */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    /* 2. Remove default margin */
+    *:not(dialog) {
+      margin: 0;
+    }
+
+    body {
+      /* 3. Improve text rendering */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    :root {
+      --border-color: #d0d0d0;
+
+      /* text colors */
+      --text-color-primary: #000000;
+      --text-color-secondary: #333333;
+
+      /* spacing */
+      --spacing-xss: 2px;
+      --spacing-xs: 4px;
+      --spacing-sm: 8px;
+      --spacing-md: 12px;
+      --spacing-lg: 16px;
+      --spacing-xl: 24px;
+      --spacing-xxl: 40px;
+      --spacing-xxxl: 80px;
+
+      /* font sizes */
+      --font-size-xs: 0.8rem;
+      --font-size-sm: 0.9rem;
+      --font-size-md: 1rem;
+      --font-size-lg: 1.1rem;
+      --font-size-xl: 1.25rem;
+      --font-size-xxl: 2.5rem;
+
+      /* line heights */
+      --line-height-base: 1.5;
+      --line-height-tight: 1.375;
+
+      /* layout */
+      --page-max-width: 900px;
+    }
+
+    html {
+      font-size: var(--text-font-size);
+    }
+
+    body {
+      /* font & text */
+      color: var(--text-color-primary);
+      font-family:
+        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+        Cantarell, sans-serif;
+      /* this variable is defined by `typography.fontSize` in resume html layout */
+      text-autospace: normal;
+
+      /* layout */
+      line-height: var(--line-height-base);
+      max-width: var(--page-max-width);
+      margin: 0 auto;
+      padding: var(--spacing-xxxl) var(--spacing-xxl) var(--spacing-xxl);
+    }
+
+    /* header */
+    .resume-header {
+      margin-bottom: var(--spacing-xxl);
+      text-align: center;
+    }
+
+    .resume-name {
+      font-size: var(--font-size-xxl);
+      font-weight: 600;
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .resume-headline {
+      font-size: var(--font-size-lg);
+      margin-bottom: var(--spacing-md);
+    }
+
+    /* contact info */
+    .resume-contact-info {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      column-gap: var(--spacing-lg);
+      row-gap: var(--spacing-xs);
+      margin-top: var(--spacing-sm);
+    }
+
+    .resume-contact-icon,
+    .resume-contact-label {
+      margin-right: var(--spacing-sm);
+      vertical-align: middle;
+    }
+
+    /* links: modern typographic style */
+    a {
+      color: var(--text-color-primary);
+      text-decoration: underline;
+      text-decoration-color: var(--border-color);
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      text-decoration-skip-ink: auto;
+      transition: text-decoration-color 0.2s;
+    }
+
+    a:hover {
+      text-decoration-color: var(--text-color-primary);
+    }
+
+    /* sections */
+    .resume-section {
+      margin-bottom: var(--spacing-xl);
+    }
+
+    .resume-section-title {
+      font-size: var(--font-size-xl);
+      font-weight: 500;
+      margin-bottom: var(--spacing-md);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: var(--spacing-xs);
+    }
+
+    /* entries */
+    .resume-entry {
+      margin-bottom: var(--spacing-lg);
+    }
+
+    .resume-entry:last-child {
+      margin-bottom: 0;
+    }
+
+    .resume-entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: var(--spacing-xs);
+    }
+
+    .resume-entry-title {
+      font-weight: 500;
+      margin-bottom: var(--spacing-xss);
+    }
+
+    .resume-entry-summary p,
+    .resume-summary-content p {
+      margin-bottom: var(--spacing-xs);
+    }
+
+    /* lists */
+    .resume-entry-summary ul,
+    .resume-entry-summary ol,
+    .resume-summary-content ul,
+    .resume-summary-content ol {
+      padding-left: var(--spacing-lg);
+      list-style-type: circle;
+    }
+
+    .resume-entry-summary li,
+    .resume-summary-content li {
+      line-height: var(--line-height-tight);
+    }
+
+    /* labeled lists (courses, keywords, etc.) */
+    .resume-labeled-list span {
+      font-weight: 500;
+    }
+
+    /* skills grid */
+    .resume-skill-item,
+    .resume-language-item {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: var(--spacing-xs);
+    }
+
+    .resume-skill-name,
+    .resume-language-name {
+      font-weight: 500;
+    }
+
+    .resume-skill-level,
+    .resume-language-fluency {
+      font-weight: 400;
+    }
+
+    /* mobile */
+    @media (max-width: 768px) {
+      body {
+        padding: var(--spacing-xl);
+      }
+
+      .resume-header {
+        margin-bottom: var(--spacing-xl);
+      }
+
+      .resume-contact-info {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .resume-entry-header {
+        flex-wrap: wrap;
+      }
+
+      .resume-skill-item,
+      .resume-language-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    /* footer */
+    .resume-footer {
+      margin-top: var(--spacing-xxl);
+      padding-top: var(--spacing-xl);
+      border-top: 1px solid var(--border-color);
+      font-size: var(--font-size-sm);
+      color: var(--text-color-secondary);
+    }
+
+    @media print {
+      .resume-footer {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="resume-header">
+    <h1 class="resume-name">Euan Scott</h1>
+    <p class="resume-headline">Senior Software Engineer</p>
+    <div class="resume-contact-info">
+      <span class="resume-contact-item"><span class="resume-contact-icon">📧</span><a href="mailto:edscott95@gmail.com" class="resume-contact-link">edscott95@gmail.com</a></span>
+      <span class="resume-contact-item"><span class="resume-contact-icon">🔗</span><a href="https://euanscott.github.io" class="resume-contact-link">https://euanscott.github.io</a></span>
+    </div>
+    <div class="resume-contact-info resume-location-info">
+      <span class="resume-contact-item"><span class="resume-contact-icon">📍</span>Somerset West, Western Cape, South Africa, 7130</span>
+    </div>
+    <div class="resume-contact-info resume-profiles-info">
+      <span class="resume-contact-item"><span class="resume-contact-label">LinkedIn</span>: <a href="https://linkedin.com/in/euan-scott-7361b9121" class="resume-contact-link">@Euan Scott</a></span>
+    </div>
+  </header>
+  <section class="resume-section" data-section="summary">
+    <h2 class="resume-section-title">Basics</h2>
+    <div class="resume-section-content">
+      <div class="resume-summary-content">
+        <p>Senior Software Engineer and Asipiring Engineering Manager with over 8 years of expertise in mobile development and technical leadership.
+          I focus on scaling engineering teams through mentorship, industry best practices and the strategic management of technical debt.
+          I am dedicated to fostering inclusive cultures that leverage psychological safety as a driver for innovation and long-term system maintainability.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="resume-section" data-section="work">
+    <h2 class="resume-section-title">Work</h2>
+    <div class="resume-section-content">
+      <div class="resume-entry">
+        <div class="resume-entry-header">
+          <div>
+            <div class="resume-entry-title"><a href="https://payflex.co.za">Payflex</a></div>
+            <div class="resume-entry-organization">Senior Software Engineer</div>
+          </div>
+          <div class="resume-entry-date">Jan 2025–Present</div>
+        </div>
+        <div class="resume-entry-summary">
+          <p>Leading a major Flutter re-architecture to scale in-store operations, achieving a 90% reduction in production crashes and 15% user growth by unlocking Huawei device support and streamlining the multi-package implementation.</p>
+        </div>
+        <div class="resume-labeled-list"><span>Keywords</span>: Flutter, Workflow Optimization, Business Growth, Leadership</div>
+      </div>
+      <div class="resume-entry">
+        <div class="resume-entry-header">
+          <div>
+            <div class="resume-entry-title"><a href="https://entelect.co.za/">Entelect</a></div>
+            <div class="resume-entry-organization">Intermediate Software Engineer</div>
+          </div>
+          <div class="resume-entry-date">Jul 2022–Dec 2024</div>
+        </div>
+        <div class="resume-entry-summary">
+          <p>Intermediate Software Engineer specialising in Mobile App development, with experience in the Health and Finance Industries. Working closely with Architecture Teams and Leadership.</p>
+        </div>
+        <div class="resume-labeled-list"><span>Keywords</span>: Flutter, Native Android, Developer Experience, Technical Documentation, Leadership</div>
+      </div>
+      <div class="resume-entry">
+        <div class="resume-entry-header">
+          <div>
+            <div class="resume-entry-title">Entelect</div>
+            <div class="resume-entry-organization">Software Engineer</div>
+          </div>
+          <div class="resume-entry-date">Aug 2021–Jun 2022</div>
+        </div>
+        <div class="resume-entry-summary">
+          <p>Modernized the Health Module by migrating legacy Java to Kotlin (MVI), working on the Java Backend-for-Frontend and standardizing web-based content integration with the Design team to ensure a unified user interface.</p>
+        </div>
+        <div class="resume-labeled-list"><span>Keywords</span>: Native Android, Spring, Microservices, Interdisciplinary Collaboration, Kotlin</div>
+      </div>
+      <div class="resume-entry">
+        <div class="resume-entry-header">
+          <div>
+            <div class="resume-entry-title"><a href="https://vectra.co.za/">Vectra Business Technologies</a></div>
+            <div class="resume-entry-organization">Software Developer</div>
+          </div>
+          <div class="resume-entry-date">Oct 2019–Jul 2021</div>
+        </div>
+        <div class="resume-entry-summary">
+          <p>Full-stack Software Developer specialising in creating mobile point-of-sale solutions and business analytics tools.</p>
+        </div>
+        <div class="resume-labeled-list"><span>Keywords</span>: Ionic Framework, Angular, Node.js</div>
+      </div>
+      <div class="resume-entry">
+        <div class="resume-entry-header">
+          <div>
+            <div class="resume-entry-title"><a href="https://warpdevelopment.com/">Warp Development</a></div>
+            <div class="resume-entry-organization">Software Developer</div>
+          </div>
+          <div class="resume-entry-date">Feb 2018–Oct 2019</div>
+        </div>
+        <div class="resume-entry-summary">
+          <p>Front-end Software Developer building Hybrid Apps for the health and finance indistries. Most notably the My Pregnancy Journey app winning accolades at the WHO Africa Innovation Challenge and the MTN App of the Year award for the &#39;Women in STEM&#39; category.</p>
+        </div>
+        <div class="resume-labeled-list"><span>Keywords</span>: Ionic Framework, Mobile Application Development, Adobe XD</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="resume-section" data-section="awards">
+    <h2 class="resume-section-title">Awards</h2>
+    <div class="resume-section-content">
+      <div class="resume-entry">
+        <div class="resume-entry-header">
+          <div>
+            <div class="resume-entry-title">To Bodly Grow</div>
+            <div class="resume-entry-organization">Entelect</div>
+          </div>
+          <div class="resume-entry-date">Dec 2021</div>
+        </div>
+        <div class="resume-entry-summary">
+          <p>An award for embodying the value of &#39;Growth isn&#39;t optional&#39;. This recognition highlights my commitment to continually improving and growing. As well as my dedication to learning, teaching and assisting other in their growth journey. I was commended for quickly upskilling in a new tech stack, deliverying solid solution and actively contributin to my teams success. I embrace the team mantra of &#39;Always be Crushing&#39;.</p>
+        </div>
+      </div>
+      <div class="resume-entry">
+        <div class="resume-entry-header">
+          <div>
+            <div class="resume-entry-title">App of the Year</div>
+            <div class="resume-entry-organization">MTN</div>
+          </div>
+          <div class="resume-entry-date">Oct 2019</div>
+        </div>
+        <div class="resume-entry-summary">
+          <p>Africa has the highest rate of adolescent pregnancies, HIV infections and birth deaths due to a lack of information. A factor that affects the health, education and earning potential of millions of African women. I assisted in creating an education pregnancy app that is focused on Africa and the unique challenges that her women face.</p>
+        </div>
+      </div>
+      <div class="resume-entry">
+        <div class="resume-entry-header">
+          <div>
+            <div class="resume-entry-title">Rookie Rockstar</div>
+            <div class="resume-entry-organization">Warp Development</div>
+          </div>
+          <div class="resume-entry-date">Apr 2019</div>
+        </div>
+        <div class="resume-entry-summary">
+          <p>Awarded to the most impactful new hire across all seniority levels.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="resume-section" data-section="skills">
+    <h2 class="resume-section-title">Skills</h2>
+    <div class="resume-section-content">
+      <div class="resume-skill-item">
+        <div class="resume-skill-name">Leadership<span class="resume-skill-level">: Beginner</span></div>
+        <div>
+          <div class="resume-labeled-list"><span>Keywords</span>: Empathy, Listening, Communication</div>
+        </div>
+      </div>
+      <div class="resume-skill-item">
+        <div class="resume-skill-name">Mobile Development<span class="resume-skill-level">: Advanced</span></div>
+        <div>
+          <div class="resume-labeled-list"><span>Keywords</span>: Kotlin, Flutter, Android, iOS, Ionic, Firebase</div>
+        </div>
+      </div>
+      <div class="resume-skill-item">
+        <div class="resume-skill-name">Backend Development<span class="resume-skill-level">: Intermediate</span></div>
+        <div>
+          <div class="resume-labeled-list"><span>Keywords</span>: Spring, Kotlin, Java, Node.js</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="resume-section" data-section="education">
+    <h2 class="resume-section-title">Education</h2>
+    <div class="resume-section-content">
+      <div class="resume-entry">
+        <div class="resume-entry-header">
+          <div>
+            <div class="resume-entry-title"><a href="https://www.up.ac.za">University of Pretoria</a></div>
+            <div class="resume-entry-organization">Bachelor, Information Science - Multiemedia</div>
+          </div>
+          <div class="resume-entry-date">Feb 2014–Dec 2017</div>
+        </div>
+        <div class="resume-entry-summary">
+          <p>Graphic Design meets Computer Science.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="resume-section" data-section="languages">
+    <h2 class="resume-section-title">Languages</h2>
+    <div class="resume-section-content">
+      <div class="resume-languages-list">
+        <div class="resume-language-item">
+          <div class="resume-language-name">English<span class="resume-language-fluency">: Native or Bilingual Proficiency</span></div>
+        </div>
+        <div class="resume-language-item">
+          <div class="resume-language-name">Norwegian<span class="resume-language-fluency">: Elementary Proficiency</span></div>
+        </div>
+        <div class="resume-language-item">
+          <div class="resume-language-name">Afrikaans<span class="resume-language-fluency">: Minimum Professional Proficiency</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="resume-footer">Generated by <a href="https://yamlresume.dev">YAMLResume</a></footer>
+</body>
+
+</html>
