@@ -26,10 +26,6 @@ body {
 
 /* Mobile Override (Viewports smaller than ~768px) */
 @media (max-width: 48em) {
-    body {
-        font-size: 1.25rem;
-    }
-
     .profile-pic {
         width: 120px;
     }
@@ -55,7 +51,7 @@ h2 {
 code {
     padding: 2px 4px;
     font-family: var(--font-code);
-    font-size: 0.9em;
+    font-size: 1.1em;
 }
 
 /* Profile Section */
