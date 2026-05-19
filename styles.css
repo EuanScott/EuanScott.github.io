@@ -4,77 +4,108 @@
     --accent-color: #8cd2d5;
     --accent-hover: #a9dde0;
     --max-width: 900px;
+
+    /* Font Stacks */
+    --font-main: "Noto Sans", sans-serif;
+    --font-code: "Fira Code", monospace;
 }
 
-.profile-pic {
-    aspect-ratio: 1 / 1;
-    border-radius: 50%;
-    object-fit: cover;
-    width: 150px;
-}
-
-@media (min-width: 48em) {
-    .profile-pic {
-        width: 200px;
-    }
-}
-
+/* Global Reset & Body */
 body {
     background: var(--bg-color);
     color: var(--text-color);
-    font-family: "Fira Code", monospace;
+    font-family: var(--font-main);
+    font-weight: 400;
+    font-size: 1rem;
     line-height: 1.6;
     margin: 0 auto;
-    padding: 2rem 1rem;
     max-width: var(--max-width);
+    padding: 2rem 1rem;
+    -webkit-font-smoothing: antialiased;
 }
 
-/* Header Layout: Mobile-First (Stacked) */
+/* Mobile Override (Viewports smaller than ~768px) */
+@media (max-width: 48em) {
+    body {
+        /* Increases base font size by 20% */
+        font-size: 1.2rem;
+    }
+}
+
+/* Typography Overrides for the "Dev" Look */
+h1,
+h2,
+h3,
+a,
+b {
+    font-family: var();
+    font-variant-ligatures: contextual;
+    font-feature-settings: "calt" 1;
+}
+
+h2 {
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-top: 2rem;
+}
+
+code {
+    padding: 2px 4px;
+    font-family: var(--font-code);
+    font-size: 0.9em;
+}
+
+/* Profile Section */
 .profile-header {
-    align-items: center;
     display: flex;
     flex-direction: column;
-    margin-bottom: 2rem;
+    align-items: center;
     gap: 1.5rem;
     text-align: center;
+    margin-bottom: 2rem;
 }
 
 .profile-pic {
-    border-radius: 50%;
-    height: 150px;
-    object-fit: cover;
     width: 150px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-/* Desktop Enhancement */
 @media (min-width: 48em) {
     .profile-header {
         flex-direction: row;
         text-align: left;
     }
-
     .profile-pic {
-        height: 200px;
         width: 200px;
     }
 }
 
+/* Interactive Elements */
 a {
     color: var(--accent-color);
-    display: inline-block;
     text-decoration: none;
+    display: inline-block;
     transition: color 0.2s ease;
+    font-weight: 500;
 }
 
 a::after {
-    background: var(--accent-hover);
     content: "";
     display: block;
-    height: 2px;
-    transition: width 0.3s;
     width: 0;
+    height: 2px;
+    background: var(--accent-hover);
+    transition: width 0.3s;
 }
 
 a:hover::after {
     width: 100%;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 2rem 0;
 }
