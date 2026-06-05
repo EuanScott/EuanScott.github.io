@@ -7,7 +7,6 @@
     --max-width: 900px;
 
     --font-main: "Noto Sans", sans-serif;
-    --font-code: "Fira Code", monospace;
 }
 
 /* Global Reset & Body */
@@ -24,48 +23,43 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Mobile Override (Viewports smaller than ~768px) */
-@media (max-width: 48em) {
-    .profile-pic {
-        width: 120px;
-    }
+header > div[hx-get] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-height: 2rem;
+    min-width: 200px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-/* Typography Overrides for the "Dev" Look */
-h1,
-h2,
-h3,
-a,
-b {
-    font-family: var(--fira-code);
-    font-variant-ligatures: contextual;
-    font-feature-settings: "calt" 1;
+header > div[hx-get]:not(.htmx-added) {
+    visibility: hidden;
 }
 
-h2 {
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    margin-top: 2rem;
-}
-
-code {
-    padding: 2px 4px;
-    font-family: var(--font-code);
-    font-size: 1.1em;
-}
-
-/* Profile Section */
+/*Profile*/
 .profile-header {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
     text-align: center;
     margin-bottom: 2rem;
+    padding-top: 2rem;
+}
+
+.lang-switcher {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: var(--font-code);
+    font-size: 0.9rem;
 }
 
 .profile-pic {
-    width: 150px;
+    width: 200px;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     object-fit: cover;
@@ -75,13 +69,32 @@ code {
     .profile-header {
         flex-direction: row;
         text-align: left;
+        padding-top: 0;
     }
-    .profile-pic {
-        width: 200px;
+    .lang-switcher {
+        top: 0;
+        right: 0;
     }
 }
 
-/* Interactive Elements */
+/* Skills*/
+.skills-list dt {
+    font-weight: bold;
+    margin-top: 1.2rem;
+}
+
+.skills-list dd {
+    line-height: 1.6;
+    margin-left: 0;
+}
+
+/*Text Styles*/
+h2 {
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-top: 2rem;
+}
+
 a {
     color: var(--accent-color);
     text-decoration: none;
@@ -107,4 +120,10 @@ hr {
     border: 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     margin: 2rem 0;
+}
+
+footer {
+    font-size: 0.85rem;
+    margin: 2rem auto;
+    text-align: center;
 }
