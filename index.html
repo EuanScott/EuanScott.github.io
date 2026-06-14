@@ -1,158 +1,166 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>Euan Scott</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" type="text/css" href="styles.css" />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        />
+<head>
+    <meta charset="utf-8"/>
+    <title>Euan Scott</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
 
-        <script src="https://unpkg.com/htmx.org@2.0.0"></script>
-        <script src="/scripts.js"></script>
+    <script src="https://unpkg.com/htmx.org@2.0.0"></script>
+    <script src="/scripts.js"></script>
 
-        <link rel="prefetch" href="/no/index.html" />
-        <link rel="prefetch" href="/af/index.html" />
-    </head>
+    <link rel="prefetch" href="/no/index.html"/>
+    <link rel="prefetch" href="/af/index.html"/>
 
-    <body hx-boost="true">
-        <main class="archive">
-            <header class="profile-header">
-                <div
+    <link rel="icon" type="image/png" href="./assets/es-favicon.png">
+</head>
+
+<body hx-boost="true">
+<main class="archive">
+    <header class="profile-header">
+        <div class="header-controls">
+            <button
+                    id="theme-toggle"
+                    class="theme-toggle"
+                    type="button"
+                    aria-label="Toggle light/dark mode"
+            >
+                <span class="material-symbols-outlined theme-icon-dark">dark_mode</span>
+                <span class="material-symbols-outlined theme-icon-light">light_mode</span>
+            </button>
+
+            <div id="nav-container"
                     hx-get="/nav.html"
                     hx-trigger="load"
-                    hx-swap="outerHTML"
-                ></div>
+                    hx-swap="innerHTML"
+            ></div>
+        </div>
 
-                <img
-                    src="https://ca.slack-edge.com/T04T4TH8W-U06HRSET744-f67e787e3c85-512"
-                    alt="Euan Scott Profile Pic"
-                    class="profile-pic"
-                />
-                <div class="profile-intro">
-                    <h2>Hiya 👋, I'm Euan Scott</h2>
-                    <p class="tagline">
-                        Senior Software Engineer | Aspiring Engineering Manager
-                    </p>
-                </div>
-            </header>
+        <img
+                src="https://ca.slack-edge.com/T04T4TH8W-U06HRSET744-f67e787e3c85-512"
+                alt="Euan Scott Profile Pic"
+                class="profile-pic"
+        />
+        <div class="profile-intro">
+            <h2>Hiya 👋, I'm Euan Scott</h2>
+            <p class="tagline">
+                Senior Software Engineer | Aspiring Engineering Manager
+            </p>
+        </div>
+    </header>
 
-            <section class="bio">
-                <p>
-                    Outside of my day job, I am an outgoing and compassionate
-                    person who enjoys connecting with others. I enjoy spending
-                    my time outdoors, walking with an ice-cream or coffee in
-                    hand.
-                </p>
-                <p>
-                    Dual South African and Scottish national with EU residency.
-                </p>
-            </section>
+    <section class="bio">
+        <p>
+            Outside of my day job, I am an outgoing and compassionate
+            person who enjoys connecting with others. I enjoy spending
+            my time outdoors, walking with an ice-cream or coffee in
+            hand.
+        </p>
+        <p>
+            Dual South African and Scottish national with EU residency.
+        </p>
+    </section>
 
-            <hr />
+    <hr/>
 
-            <section class="links">
-                <h2>Check me out on</h2>
-                <nav>
-                    <a href="https://github.com/EuanScott" target="_blank"
-                        >GitHub</a
-                    >,
-                    <a
-                        href="https://www.linkedin.com/in/euan-scott-7361b9121/"
-                        target="_blank"
-                        >LinkedIn</a
-                    >
-                    or
-                    <a href="mailto:edscott95@gmail.com">Mail me</a>
-                </nav>
-            </section>
+    <section class="links">
+        <h2>Check me out on</h2>
+        <nav>
+            <a href="https://github.com/EuanScott" target="_blank"
+            >GitHub</a
+            >,
+            <a
+                    href="https://www.linkedin.com/in/euan-scott-7361b9121/"
+                    target="_blank"
+            >LinkedIn</a
+            >
+            or
+            <a href="mailto:edscott95@gmail.com">Mail me</a>
+        </nav>
+    </section>
 
-            <hr />
+    <hr/>
 
-            <section class="experience">
-                <h2>Experience</h2>
-                <p>
-                    Building systems for
-                    <a href="https://www.payflex.co.za" target="_blank"
-                        >Payflex</a
-                    >,
-                    <a
-                        href="https://www.oldmutual.co.za/appstores/"
-                        target="_blank"
-                        >Old Mutual</a
-                    >,
-                    <a
-                        href="https://www.discovery.co.za/corporate/our-apps"
-                        target="_blank"
-                        >Discovery</a
-                    >
-                    and award-winning apps such as
-                    <a
-                        href="https://www.mypregnancyjourney.co.za/"
-                        target="_blank"
-                        >My Pregnancy Journey</a
-                    >.
-                </p>
-                <p>
-                    <a
-                        href="./Euan-Scott-Resume.html"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        >View</a
-                    >
-                    or
-                    <a
-                        href="assets/Euan-Scott-Resume.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        >Download</a
-                    >
-                    my resumé.
-                </p>
-            </section>
+    <section class="experience">
+        <h2>Experience</h2>
+        <p>
+            Building systems for
+            <a href="https://www.payflex.co.za" target="_blank"
+            >Payflex</a
+            >,
+            <a
+                    href="https://www.oldmutual.co.za/appstores/"
+                    target="_blank"
+            >Old Mutual</a
+            >,
+            <a
+                    href="https://www.discovery.co.za/corporate/our-apps"
+                    target="_blank"
+            >Discovery</a
+            >
+            and award-winning apps such as
+            <a
+                    href="https://www.mypregnancyjourney.co.za/"
+                    target="_blank"
+            >My Pregnancy Journey</a
+            >.
+        </p>
+        <p>
+            <a
+                    href="./Euan-Scott-Resume.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+            >View</a
+            >
+            or
+            <a
+                    href="assets/Euan-Scott-Resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+            >Download</a
+            >
+            my resumé.
+        </p>
+    </section>
 
-            <hr />
+    <hr/>
 
-            <section class="skills">
-                <h2>Skills</h2>
-                <dl class="skills-list">
-                    <dt>Core Competencies:</dt>
-                    <dd>
-                        Technical Leadership, Architectural Strategy, Developer
-                        Experience (DX), Cross-Platform Engineering.
-                    </dd>
-                    <dt>Strategic Focus:</dt>
-                    <dd>
-                        System Reliability, Modular Architecture, Cross-Team
-                        Collaboration.
-                    </dd>
-                    <dt>Current Focus:</dt>
-                    <dd>
-                        Influencing cross-platform engineering standards and
-                        driving architectural alignment between Mobile and Web.
-                    </dd>
-                    <dt>Currently Learning:</dt>
-                    <dd>Norwegian and how to be a better human.</dd>
-                </dl>
-            </section>
+    <section class="skills">
+        <h2>Skills</h2>
+        <dl class="skills-list">
+            <dt>Core Competencies:</dt>
+            <dd>
+                Technical Leadership, Architectural Strategy, Developer
+                Experience (DX), Cross-Platform Engineering.
+            </dd>
+            <dt>Strategic Focus:</dt>
+            <dd>
+                System Reliability, Modular Architecture, Cross-Team
+                Collaboration.
+            </dd>
+            <dt>Current Focus:</dt>
+            <dd>
+                Influencing cross-platform engineering standards and
+                driving architectural alignment between Mobile and Web.
+            </dd>
+            <dt>Currently Learning:</dt>
+            <dd>Norwegian and how to be a better human.</dd>
+        </dl>
+    </section>
 
-            <hr />
+    <hr/>
 
-            <section class="education">
-                <h2>Education</h2>
-                <p>
-                    Bachelor of Information Science (Multimedia) - University of
-                    Pretoria, 2017
-                </p>
-            </section>
-        </main>
-    </body>
+    <section class="education">
+        <h2>Education</h2>
+        <p>
+            Bachelor of Information Science (Multimedia) - University of
+            Pretoria, 2017
+        </p>
+    </section>
+</main>
+</body>
 </html>

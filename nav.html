@@ -1,5 +1,11 @@
-<nav class="lang-switcher" hx-boost="true">
-    <a href="/" data-lang="en">EN 🏴󠁧󠁢󠁥󠁮󠁧󠁿</a>
-    <a href="/no/" data-lang="no">NO 🇳🇴</a>
-    <a href="/af/" data-lang="af">AF 🇿🇦</a>
+<nav class="lang-switcher">
+    <label for="lang-select" aria-label="Change language">
+        <span class="material-symbols-outlined">translate</span>
+    </label>
+    <select id="lang-select"
+            aria-label="Select language">
+        <option value="/" data-lang="en">English</option>
+        <option value="/no/" data-lang="no">Norsk</option>
+        <option value="/af/" data-lang="af">Afrikaans</option>
+    </select>
 </nav>
