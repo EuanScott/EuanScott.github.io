@@ -92,9 +92,9 @@ footer {
     transition: background 0.15s ease, color 0.15s ease;
 }
 
-.theme-toggle .material-symbols-outlined {
-    font-size: 1.6rem;
-    line-height: 1;
+.theme-toggle svg {
+    width: 1.6rem;
+    height: 1.6rem;
 }
 
 /* Theme Toggle Icons */
@@ -146,14 +146,9 @@ footer {
     transition: background 0.15s ease, color 0.15s ease;
 }
 
-.lang-switcher .material-symbols-outlined {
-    font-size: 1.28rem;
-    line-height: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
+.lang-switcher svg {
+    width: 1.28rem;
+    height: 1.28rem;
 }
 
 #lang-select {
@@ -231,10 +226,6 @@ a::after {
         padding-top: 0;
     }
 
-    .lang-switcher {
-        top: 0;
-        right: 0;
-    }
 }
 
 @media (hover: hover) {
