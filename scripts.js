@@ -38,11 +38,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Update Lang Select value when HTMX swaps nav
+    // Update Lang Select value and nav tooltip when HTMX swaps nav
     document.body.addEventListener("htmx:afterSettle", (event) => {
         const langSelect = document.getElementById('lang-select');
         if (langSelect) {
             langSelect.value = window.location.pathname;
         }
+
     });
 });
