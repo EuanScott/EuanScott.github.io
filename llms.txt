@@ -1,0 +1,23 @@
+# Euan Scott
+
+> Senior Software Engineer and aspiring Engineering Manager. Dual South African and Scottish national with EU residency.
+
+## Metadata
+- Email: edscott95@gmail.com
+- GitHub: https://github.com/EuanScott
+- LinkedIn: https://www.linkedin.com/in/euan-scott-7361b9121/
+
+## Core Resources
+- [Resume (Markdown)](/resume.md): A clean, raw text representation of my professional CV, optimized for quick AI consumption.
+- [Main Portfolio (English)](/index.html): Human-friendly landing page in English.
+- [Afrikaans Portfolio](/af/index.html): Human-friendly landing page in Afrikaans.
+- [Norwegian Portfolio](/no/index.html): Human-friendly landing page in Norwegian.
+
+## Brief Bio
+Outside of my day job, I am an outgoing and compassionate person who enjoys connecting with others. I enjoy spending my time outdoors, walking with an ice-cream or coffee in hand.
+
+## Core Competencies
+- Technical Leadership, Architectural Strategy, Developer Experience (DX), Cross-Platform Engineering.
+- System Reliability, Modular Architecture, Cross-Team Collaboration.
+- Current Focus: Influencing cross-platform engineering standards and driving architectural alignment between Mobile and Web.
+- Currently Learning: Norwegian.
