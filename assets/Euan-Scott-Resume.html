@@ -11,6 +11,8 @@
   <style>
     :root {
       --text-font-size: 16px;
+      --text-font-family: var(--text-default-font-family);
+      --line-height: 1.5;
     }
 
     /* Modified from: https://www.joshwcomeau.com/css/custom-css-reset/ */
@@ -58,12 +60,13 @@
       --font-size-xl: 1.25rem;
       --font-size-xxl: 2.5rem;
 
-      /* line heights */
-      --line-height-base: 1.5;
-      --line-height-tight: 1.375;
-
       /* layout */
       --page-max-width: 900px;
+
+      /* typography */
+      --text-default-font-family:
+        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+        Cantarell, sans-serif;
     }
 
     html {
@@ -73,14 +76,12 @@
     body {
       /* font & text */
       color: var(--text-color-primary);
-      font-family:
-        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
-        Cantarell, sans-serif;
+      font-family: var(--text-font-family);
       /* this variable is defined by `typography.fontSize` in resume html layout */
       text-autospace: normal;
 
       /* layout */
-      line-height: var(--line-height-base);
+      line-height: var(--line-height);
       max-width: var(--page-max-width);
       margin: 0 auto;
       padding: var(--spacing-xxxl) var(--spacing-xxl) var(--spacing-xxl);
@@ -182,11 +183,6 @@
       list-style-type: circle;
     }
 
-    .resume-entry-summary li,
-    .resume-summary-content li {
-      line-height: var(--line-height-tight);
-    }
-
     /* labeled lists (courses, keywords, etc.) */
     .resume-labeled-list span {
       font-weight: 500;
@@ -267,19 +263,19 @@
     </div>
     <div class="resume-contact-info resume-profiles-info">
       <span class="resume-contact-item"><span class="resume-contact-label">LinkedIn</span>: <a href="https://linkedin.com/in/euan-scott-7361b9121" class="resume-contact-link">@Euan Scott</a></span>
+      <span class="resume-contact-item"><span class="resume-contact-label">GitHub</span>: <a href="https://github.com/EuanScott" class="resume-contact-link">@Euan Scott</a></span>
     </div>
   </header>
   <section class="resume-section" data-section="summary">
     <h2 class="resume-section-title">Basics</h2>
     <div class="resume-section-content">
       <div class="resume-summary-content">
-        <p>Senior Software Engineer and Asipiring Engineering Manager with over 8 years of expertise in mobile development and technical leadership.
-          I focus on scaling engineering teams through mentorship, industry best practices and the strategic management of technical debt.
-          I am dedicated to fostering inclusive cultures that leverage psychological safety as a driver for innovation and long-term system maintainability.</p>
+        <p>Senior Software Engineer and Aspiring Engineering Manager with over 8 years of expertise in mobile development and technical leadership.
+          I focus on scaling engineering teams through mentorship, industry best practices and technical excellence.
+          I am dedicated to fostering an inclusive culture, that leverage psychological safety as a driver for innovation and long-term growth.</p>
       </div>
     </div>
   </section>
-
   <section class="resume-section" data-section="work">
     <h2 class="resume-section-title">Work</h2>
     <div class="resume-section-content">
@@ -292,7 +288,7 @@
           <div class="resume-entry-date">Jan 2025–Present</div>
         </div>
         <div class="resume-entry-summary">
-          <p>Leading a Flutter re-architecture to scale in-store operations and reduce production crashes by 96%, while driving cross-team technical governance and standardizing engineering workflows across the company.</p>
+          <p>Leading a Flutter re-architecture to scale in-store operations and reduce production crashes by 96%, while driving cross-team technical governance and standardizing engineering workflows across the company. As of financial year end 2026, the in-store operations has grown 3x in revenue to over R1 Billon.</p>
         </div>
         <div class="resume-labeled-list"><span>Keywords</span>: Technical Leadership, Developer Experience, System Design, Flutter</div>
       </div>
@@ -350,7 +346,6 @@
       </div>
     </div>
   </section>
-
   <section class="resume-section" data-section="awards">
     <h2 class="resume-section-title">Awards</h2>
     <div class="resume-section-content">
@@ -392,7 +387,6 @@
       </div>
     </div>
   </section>
-
   <section class="resume-section" data-section="skills">
     <h2 class="resume-section-title">Skills</h2>
     <div class="resume-section-content">
@@ -416,7 +410,6 @@
       </div>
     </div>
   </section>
-
   <section class="resume-section" data-section="education">
     <h2 class="resume-section-title">Education</h2>
     <div class="resume-section-content">
@@ -434,7 +427,6 @@
       </div>
     </div>
   </section>
-
   <section class="resume-section" data-section="languages">
     <h2 class="resume-section-title">Languages</h2>
     <div class="resume-section-content">
@@ -451,7 +443,6 @@
       </div>
     </div>
   </section>
-
   <section class="resume-section" data-section="interests">
     <h2 class="resume-section-title">Interests</h2>
     <div class="resume-section-content">
