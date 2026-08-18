@@ -192,8 +192,7 @@
     .resume-skill-item,
     .resume-language-item {
       display: flex;
-      align-items: baseline;
-      justify-content: space-between;
+      flex-direction: column;
       margin-bottom: var(--spacing-xs);
     }
 
@@ -225,12 +224,6 @@
       .resume-entry-header {
         flex-wrap: wrap;
       }
-
-      .resume-skill-item,
-      .resume-language-item {
-        flex-direction: column;
-        align-items: flex-start;
-      }
     }
 
     /* footer */
@@ -259,24 +252,24 @@
       <span class="resume-contact-item"><span class="resume-contact-icon">🔗</span><a href="https://euanscott.github.io" class="resume-contact-link">https://euanscott.github.io</a></span>
     </div>
     <div class="resume-contact-info resume-location-info">
-      <span class="resume-contact-item"><span class="resume-contact-icon">📍</span>Somerset West, Western Cape, South Africa, 7130</span>
+      <span class="resume-contact-item"><span class="resume-contact-icon">📍</span>Bergen, Vestland, Norway</span>
     </div>
     <div class="resume-contact-info resume-profiles-info">
       <span class="resume-contact-item"><span class="resume-contact-label">LinkedIn</span>: <a href="https://linkedin.com/in/euan-scott-7361b9121" class="resume-contact-link">@Euan Scott</a></span>
       <span class="resume-contact-item"><span class="resume-contact-label">GitHub</span>: <a href="https://github.com/EuanScott" class="resume-contact-link">@Euan Scott</a></span>
     </div>
   </header>
-  <section class="resume-section" data-section="summary">
+  <section class="resume-section" id="summary" data-section="summary">
     <h2 class="resume-section-title">Basics</h2>
     <div class="resume-section-content">
       <div class="resume-summary-content">
-        <p>Senior Software Engineer and Aspiring Engineering Manager with over 8 years of expertise in mobile development and technical leadership.
-          I focus on scaling engineering teams through mentorship, industry best practices and technical excellence.
-          I am dedicated to fostering an inclusive culture, that leverage psychological safety as a driver for innovation and long-term growth.</p>
+        <p>Senior Software Engineer with over eight years&#39; experience scaling mobile applications and engineering workflows across Flutter, Android, and backend technologies.
+          Full right to work in Norway (EU/EEA spouse residence card; no sponsorship required), relocating January 2027.
+          Dedicated to team mentorship and technical governance, fostering an inclusive culture grounded in psychological safety, engineering excellence, and long-term growth.</p>
       </div>
     </div>
   </section>
-  <section class="resume-section" data-section="work">
+  <section class="resume-section" id="work" data-section="work">
     <h2 class="resume-section-title">Work</h2>
     <div class="resume-section-content">
       <div class="resume-entry">
@@ -288,7 +281,7 @@
           <div class="resume-entry-date">Jan 2025–Present</div>
         </div>
         <div class="resume-entry-summary">
-          <p>Leading a Flutter re-architecture to scale in-store operations and reduce production crashes by 96%, while driving cross-team technical governance and standardizing engineering workflows across the company. As of financial year end 2026, the in-store operations has grown 3x in revenue to over R1 Billon.</p>
+          <p>Led a Flutter re-architecture to scale in-store operations and reduce production crashes by 96% while driving cross-team technical governance and standardizing engineering workflows across the company. As of financial year-end 2026, in-store operations has grown 4x in revenue to over R1 billion.</p>
         </div>
         <div class="resume-labeled-list"><span>Keywords</span>: Technical Leadership, Developer Experience, System Design, Flutter</div>
       </div>
@@ -301,7 +294,7 @@
           <div class="resume-entry-date">Jul 2022–Dec 2024</div>
         </div>
         <div class="resume-entry-summary">
-          <p>Intermediate Software Engineer specialising in Mobile App development, with experience in the Health and Finance Industries. Working closely with Architecture Teams and Leadership.</p>
+          <p>Intermediate software engineer specializing in mobile app development with experience in the health and finance industries. Worked closely with architecture teams and leadership.</p>
         </div>
         <div class="resume-labeled-list"><span>Keywords</span>: Flutter, Native Android, Developer Experience, Technical Documentation, Leadership</div>
       </div>
@@ -314,7 +307,7 @@
           <div class="resume-entry-date">Aug 2021–Jun 2022</div>
         </div>
         <div class="resume-entry-summary">
-          <p>Modernized the Health Module by migrating legacy Java to Kotlin (MVI), working on the Java Backend-for-Frontend and standardizing web-based content integration with the Design team to ensure a unified user interface.</p>
+          <p>Modernized the Health module by migrating legacy Java to Kotlin utilising MVI. Worked on the Java backend-for-frontend and standardized web-based content integration with the design team to ensure a unified user interface.</p>
         </div>
         <div class="resume-labeled-list"><span>Keywords</span>: Native Android, Spring, Microservices, Interdisciplinary Collaboration, Kotlin</div>
       </div>
@@ -346,7 +339,7 @@
       </div>
     </div>
   </section>
-  <section class="resume-section" data-section="awards">
+  <section class="resume-section" id="awards" data-section="awards">
     <h2 class="resume-section-title">Awards</h2>
     <div class="resume-section-content">
       <div class="resume-entry">
@@ -387,7 +380,7 @@
       </div>
     </div>
   </section>
-  <section class="resume-section" data-section="skills">
+  <section class="resume-section" id="skills" data-section="skills">
     <h2 class="resume-section-title">Skills</h2>
     <div class="resume-section-content">
       <div class="resume-skill-item">
@@ -410,7 +403,7 @@
       </div>
     </div>
   </section>
-  <section class="resume-section" data-section="education">
+  <section class="resume-section" id="education" data-section="education">
     <h2 class="resume-section-title">Education</h2>
     <div class="resume-section-content">
       <div class="resume-entry">
@@ -427,7 +420,7 @@
       </div>
     </div>
   </section>
-  <section class="resume-section" data-section="languages">
+  <section class="resume-section" id="languages" data-section="languages">
     <h2 class="resume-section-title">Languages</h2>
     <div class="resume-section-content">
       <div class="resume-languages-list">
@@ -443,7 +436,7 @@
       </div>
     </div>
   </section>
-  <section class="resume-section" data-section="interests">
+  <section class="resume-section" id="interests" data-section="interests">
     <h2 class="resume-section-title">Interests</h2>
     <div class="resume-section-content">
       <div class="resume-interest-item"><span class="resume-interest-name">Music</span>: Piano, Guitar</div>
